@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Native", "Native", "{B47244
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobFlix.Android", "MobFlix.Android\MobFlix.Android.csproj", "{CEEDD94D-A12F-4138-B971-7F13CC666689}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobFlix.iOS", "MobFlix.Android\MobFlix.iOS\MobFlix.iOS.csproj", "{B06A4109-2F3D-4B10-B15A-ACA8BF5C4281}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobFlix.iOS", "MobFlix.iOS\MobFlix.iOS.csproj", "{B06A4109-2F3D-4B10-B15A-ACA8BF5C4281}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{4D9E5881-F7AF-4D7E-A894-166E48A73376}"
 EndProject
