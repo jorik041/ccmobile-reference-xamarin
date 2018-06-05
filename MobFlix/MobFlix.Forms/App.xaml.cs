@@ -1,6 +1,7 @@
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using MobFlix.Forms.Pages;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace MobFlix.Forms
@@ -11,7 +12,7 @@ namespace MobFlix.Forms
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NowInCinemaPage();
         }
 
         protected override void OnStart()
