@@ -8,4 +8,7 @@
   <ItemGroup>
     <Folder Include="Pages\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MobFlix.Core\MobFlix.Core.csproj" />
+  </ItemGroup>
 </Project>

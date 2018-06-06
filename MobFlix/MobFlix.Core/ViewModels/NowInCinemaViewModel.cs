@@ -1,29 +1,40 @@
 ﻿using System.Collections.Generic;
 using MobFlix.Core.Models;
 using System.Threading.Tasks;
-using Refit;
 using MobFlix.Core.Services;
+using System.Linq;
+using System.Collections.ObjectModel;
 
 namespace MobFlix.Core.ViewModels
 {
     public class NowInCinemaViewModel : BaseViewModel
     {
-        private List<Movie> _movies = new List<Movie>();
-        public List<Movie> Movies 
-        { 
-            get{ return _movies; } 
-            set
-            {
-                _movies = value;
-                RaisePropertyChanged();
-            } 
-        } 
-       
-        public async Task LoadAsync()
+        public ObservableCollection<Movie> Movies { get; set; }
+
+        private readonly IMovieService _movieService;
+        public NowInCinemaViewModel(IMovieService movieService)
         {
-            // TODO: replace with baseUrl
-            var movieService = RestService.For<IMovieService>("");
-            Movies = await movieService.GetAllInCinemaAsync().ConfigureAwait(false);
+            _movieService = movieService;
+            Movies = new ObservableCollection<Movie>();
+        }
+
+        public override async void OnAppearing()
+        {
+            base.OnAppearing();
+            await GetMovies();
+        }
+
+        public async Task GetMovies()
+        {
+            var searchResult = await _movieService.GetAllInCinemaAsync();
+            if (searchResult != null)
+            {
+                // TODO: improve
+                foreach(var movie in searchResult.Movies)
+                {
+                    Movies.Add(movie);
+                }
+            }
         }
     }
 }

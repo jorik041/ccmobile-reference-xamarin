@@ -2,6 +2,8 @@ using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using MobFlix.Forms.Pages;
+using MobFlix.Core.ViewModels;
+using MobFlix.Core.Services;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace MobFlix.Forms
@@ -12,7 +14,7 @@ namespace MobFlix.Forms
         {
             InitializeComponent();
 
-            MainPage = new NowInCinemaPage();
+            MainPage = new NowInCinemaPage() { BindingContext = new NowInCinemaViewModel(MovieDbServiceResolver.Resolve<IMovieService>()) };
         }
 
         protected override void OnStart()
