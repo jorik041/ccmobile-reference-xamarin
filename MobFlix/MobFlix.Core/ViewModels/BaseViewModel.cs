@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
 namespace MobFlix.Core.ViewModels
@@ -11,5 +12,9 @@ namespace MobFlix.Core.ViewModels
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
+        public virtual void OnAppearing() {}
+
+        public virtual void OnDisappearing() {}
     }
 }
