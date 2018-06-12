@@ -2,15 +2,21 @@
 <pages:BasePage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="MobFlix.Forms.Pages.NowInCinemaPage"
-             xmlns:pages="clr-namespace:MobFlix.Forms.Pages;assembly=MobFlix.Forms">
+             xmlns:pages="clr-namespace:MobFlix.Forms.Pages;assembly=MobFlix.Forms"
+             Title="Now in cinema">
     <pages:BasePage.Content>
-          <ListView ItemsSource="{Binding Movies}" RowHeight="100">
+          <ListView ItemsSource="{Binding Movies}" RowHeight="215" CachingStrategy="RecycleElement">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Orientation="Horizontal">
-                            <Image Source="https://image.tmdb.org/t/p/w185/to0spRl1CMDvyUbOnbb4fTk3VAd.jpg" />
-                            <Label Text="{Binding Title}" />
+                        <StackLayout Orientation="Horizontal" Margin="5">
+                            <Image WidthRequest="140" Aspect="AspectFill" Source="{Binding FullPosterPath}" VerticalOptions="FillAndExpand" />
+                            <StackLayout>
+                                <Label Text="{Binding Title}" FontAttributes="Bold" />
+                                <Label Text="{Binding ReleaseDate, StringFormat='{0:MMMM d, yyyy}'}" />
+                                <Label Text="{Binding Overview}" HeightRequest="80" />
+                                <Label Text="More info" Margin="5" FontAttributes="Bold" VerticalOptions="EndAndExpand" />
+                            </StackLayout>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>

@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+
 namespace MobFlix.Core.Models.Responses
 {
     public class SearchResultResponse
