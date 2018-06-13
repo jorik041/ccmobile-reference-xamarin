@@ -2,7 +2,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using MobFlix.Forms.Pages;
 using MobFlix.Core.ViewModels;
-using MobFlix.Core.Services;
+using MobFlix.Core.Services.MovieDb;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace MobFlix.Forms

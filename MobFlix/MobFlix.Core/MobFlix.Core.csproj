@@ -12,6 +12,8 @@
     <Folder Include="Models\Requests\" />
     <Folder Include="Models\Responses\" />
     <Folder Include="Services\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Services\MovieDb\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Refit" Version="4.5.6" />

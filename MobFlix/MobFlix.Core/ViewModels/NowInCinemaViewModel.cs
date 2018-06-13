@@ -1,8 +1,8 @@
 ﻿using MobFlix.Core.Models;
 using System.Threading.Tasks;
-using MobFlix.Core.Services;
 using System.Collections.Generic;
 using System.Linq;
+using MobFlix.Core.Services.MovieDb;
 
 namespace MobFlix.Core.ViewModels
 {

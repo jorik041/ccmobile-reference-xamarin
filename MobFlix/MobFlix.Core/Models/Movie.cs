@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using MobFlix.Core.Services;
+using MobFlix.Core.Services.MovieDb;
 using Newtonsoft.Json;
 
 namespace MobFlix.Core.Models
