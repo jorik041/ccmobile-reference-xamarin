@@ -5,6 +5,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Class1.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Models\Requests\" />
+    <Folder Include="Models\Responses\" />
+    <Folder Include="Services\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Services\MovieDb\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Refit" Version="4.5.6" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
   </ItemGroup>
 </Project>
